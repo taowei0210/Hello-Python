@@ -1,0 +1,21 @@
+pipeline {
+    agent {
+        label "${params.NODE_LABEL}"
+    }
+    options {
+        timestamps()
+    }
+    stages {
+        stage("Get sources from github"){
+            steps {
+                println "Get version"
+            }
+        }
+        stage("Test") {
+            steps {
+                println "test"
+            }
+        }
+
+    }
+}
