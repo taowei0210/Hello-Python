@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Get sources from github"){
             steps {
-                println "Get version"
+                println "Get branch: ${env.BRANCH_NAME}"
             }
         }
         stage("Test") {
